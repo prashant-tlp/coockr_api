@@ -22,6 +22,11 @@ app.use("/admin",adminRouter)
 const userRouter=require('./userroutes/userroutes')
 app.use('/user',userRouter)
 
+//////////////Test Route /////////////
+app.post('/testapi',async(req,res)=>{
+    res.send({message:"api is live and working"})
+})
+
 app.listen(port,()=>{
     console.log(`http://localhost:${port}`)
 })
